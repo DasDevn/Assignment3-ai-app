@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+</head>
+<body>
+    <h1>Recipe Generator</h1>
+    <form method="POST">
+        <label for="ingredients">Enter ingredients (comma-separated):</label><br>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g., chicken, rice, broccoli" required>
+        <br><br>
+        <button type="submit">Generate Recipe</button>
+    </form>
+
+    {% if recipe %}
+    <h2>Generated Recipe</h2>
+    <p><strong>Ingredients:</strong> {{ ingredients }}</p>
+    <p><strong>Recipe:</strong> {{ recipe }}</p>
+    {% endif %}
+</body>
+</html>
